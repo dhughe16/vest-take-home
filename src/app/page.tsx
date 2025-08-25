@@ -1,5 +1,6 @@
 import Image from "next/image";
 import MainChart from "./components/MainChart/MainChart.component";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -14,7 +15,7 @@ export default function Home() {
         </Image>
       </header>
       <main className="flex flex-col gap-[32px] row-start-2 items-center justify-items-center p-4">
-        <div className="card bg-[#00808F] rounded-md p-3 w-[100%]">
+        <div className="card bg-[#00808F] rounded-md p-3 w-[100%] text-white">
           <p >Total Portfolio Value</p>
           <div className="text-2xl font-bold">$1,000,000</div>
         </div>
@@ -35,7 +36,9 @@ export default function Home() {
             <div className="text-xl font-bold">89%</div>
           </div>
         </div>
-        <button className="primary bg-[#FF7619] rounded-sm p-3 font-bold text-lg text-white">View Summary</button>
+        <Link href="/summary" passHref>
+          <button className="primary bg-[#FF7619] rounded-sm p-3 font-bold text-lg text-white">View Summary</button>
+        </Link>
       </main>
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center m-3">
         <p className="text-xs text-[#7db2c8d6]">

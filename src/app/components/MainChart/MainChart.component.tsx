@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { Chart } from 'primereact/chart';
 import performanceData from "../../../data/performance.json"
 
-export default function LineDemo() {
+export default function MainChart() {
     const [chartData, setChartData] = useState({});
     const [chartOptions, setChartOptions] = useState({});
 
