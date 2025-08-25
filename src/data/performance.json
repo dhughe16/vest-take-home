@@ -1,0 +1,82 @@
+[
+    {
+    "date": "2023-06-22",
+    "portfolioValue": 1000000,
+    "benchmarkSP500": 1000000,
+    "benchmarkRussell2000": 1000000,
+    "benchmarkMSCIWorld": 1000000,
+    "cashFlow": 50000,
+    "marketEvents": ["portfolio_inception"]
+    },
+    {
+    "date": "2024-06-21",
+    "portfolioValue": 1087234,
+    "benchmarkSP500": 1063421,
+    "benchmarkRussell2000": 1021876,
+    "benchmarkMSCIWorld": 1056789,
+    "marketEvents": ["quarterly_rebalance"]
+    },
+    {
+    "date": "2024-09-20",
+    "portfolioValue": 1115678,
+    "benchmarkSP500": 1082345,
+    "benchmarkRussell2000": 1045678,
+    "benchmarkMSCIWorld": 1075321,
+    "cashFlow": 0,
+    "marketEvents": ["dividend_distribution"]
+    },
+    {
+    "date": "2024-12-20",
+    "portfolioValue": 1143210,
+    "benchmarkSP500": 1109876,
+    "benchmarkRussell2000": 1054321,
+    "benchmarkMSCIWorld": 1098765,
+    "cashFlow": 0,
+    "marketEvents": []
+    },
+    {
+    "date": "2025-03-21",
+    "portfolioValue": 1168543,
+    "benchmarkSP500": 1135210,
+    "benchmarkRussell2000": 1087654,
+    "benchmarkMSCIWorld": 1121098,
+    "cashFlow": 0,
+    "marketEvents": ["quarterly_rebalance", "economic_data_release"]
+    },
+    {
+    "date": "2025-06-20",
+    "portfolioValue": 1201987,
+    "benchmarkSP500": 1164532,
+    "benchmarkRussell2000": 1109876,
+    "benchmarkMSCIWorld": 1156432,
+    "cashFlow": -25000,
+    "marketEvents": []
+    },
+    {
+    "date": "2025-09-19",
+    "portfolioValue": 1225345,
+    "benchmarkSP500": 1187901,
+    "benchmarkRussell2000": 1123456,
+    "benchmarkMSCIWorld": 1180234,
+    "cashFlow": 0,
+    "marketEvents": ["dividend_distribution"]
+    },
+    {
+    "date": "2025-12-19",
+    "portfolioValue": 1250876,
+    "benchmarkSP500": 1210456,
+    "benchmarkRussell2000": 1145678,
+    "benchmarkMSCIWorld": 1205678,
+    "cashFlow": 15000,
+    "marketEvents": []
+    },
+    {
+    "date": "2026-03-20",
+    "portfolioValue": 1283543,
+    "benchmarkSP500": 1238765,
+    "benchmarkRussell2000": 1178901,
+    "benchmarkMSCIWorld": 1234567,
+    "cashFlow": 0,
+    "marketEvents": ["quarterly_rebalance"]
+    }
+]

@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Chart } from 'primereact/chart';
+import performanceData from "../../../data/performance.json"
 
 export default function LineDemo() {
     const [chartData, setChartData] = useState({});
@@ -13,22 +14,36 @@ export default function LineDemo() {
         const textColorSecondary = documentStyle.getPropertyValue('--text-color-secondary');
         const surfaceBorder = documentStyle.getPropertyValue('--surface-border');
         const data = {
-            labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+            labels: performanceData.map(item => item.date),
             datasets: [
                 {
-                    label: 'First Dataset',
-                    data: [65, 59, 80, 81, 56, 55, 40],
+                    label: 'Portfolio Value',
+                    data: performanceData.map(item => item.portfolioValue),
                     fill: false,
                     borderColor: documentStyle.getPropertyValue('--blue-500'),
                     tension: 0.4
                 },
                 {
-                    label: 'Second Dataset',
-                    data: [28, 48, 40, 19, 86, 27, 90],
+                    label: 'SP500',
+                    data: performanceData.map(item => item.benchmarkSP500),
                     fill: false,
-                    borderColor: documentStyle.getPropertyValue('--pink-500'),
+                    borderColor: documentStyle.getPropertyValue('--blue-500'),
                     tension: 0.4
-                }
+                },
+                {
+                    label: 'Russell 2000',
+                    data: performanceData.map(item => item.benchmarkRussell2000),
+                    fill: false,
+                    borderColor: documentStyle.getPropertyValue('--blue-500'),
+                    tension: 0.4
+                },
+                {
+                    label: 'MSCI World',
+                    data: performanceData.map(item => item.benchmarkMSCIWorld),
+                    fill: false,
+                    borderColor: documentStyle.getPropertyValue('--blue-500'),
+                    tension: 0.4
+                },
             ]
         };
         const options = {

@@ -31,8 +31,8 @@ export default function Home() {
             <div className="text-xl font-bold">DASH</div>
           </div>
           <div className="card rounded-md p-3 bg-white text-gray-900">
-            <p className="text-sm">Total Portfolio Value</p>
-            <div className="text-xl font-bold">$1,234.56</div>
+            <p className="text-sm">% Target</p>
+            <div className="text-xl font-bold">89%</div>
           </div>
         </div>
         <button className="primary bg-[#FF7619] rounded-sm p-3 font-bold text-lg text-white">View Summary</button>
