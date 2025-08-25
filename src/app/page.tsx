@@ -23,7 +23,7 @@ export default function Home() {
         </div>
         <div className="summary-cards flex gap-[16px]">
           <div className="card rounded-md p-3 bg-white text-gray-900">
-            <p className="text-sm text-greeen-600">Today's Δ</p>
+            <p className="text-sm text-greeen-600">Today&#39;s Δ</p>
             <div className="text-xl font-bold">+$1,234.56</div>
           </div>
           <div className="card rounded-md p-3 bg-white text-gray-900">
