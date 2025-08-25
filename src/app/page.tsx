@@ -1,5 +1,5 @@
 import Image from "next/image";
-import MainChart from "./components/MainChart/MainChart";
+import MainChart from "./components/MainChart/MainChart.component";
 
 export default function Home() {
   return (

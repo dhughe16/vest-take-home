@@ -67,7 +67,7 @@ export default function LineDemo() {
 
     return (
         <div className="card">
-            <Chart type="line" data={chartData} options={chartOptions} />
+            <Chart type="line" data={chartData} options={chartOptions} data-testid="main-chart"/>
         </div>
     )
 }
