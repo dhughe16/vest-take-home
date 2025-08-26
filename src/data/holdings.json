@@ -18,15 +18,7 @@
     "peRatio": 28.7,
     "marketCap": 3120000000000,
     "lastUpdated": "2024-06-22T16:00:00Z",
-    "corporateActions": [
-      {
-        "type": "split",
-        "date": "2024-02-15",
-        "details": "4:1 stock split",
-        "impactOnShares": 4,
-        "impactOnPrice": 0.25
-      }
-    ],
+    "corporateActions": [],
     "riskMetrics": {
       "volatility": 0.28,
       "sharpeRatio": 1.34,

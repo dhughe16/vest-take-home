@@ -11,8 +11,13 @@ const findSymbolData = (symbol: string) => {
   return holdingsData.find((item) => item.symbol === symbol);
 }
 
+interface MenuItem {
+    name: string;
+    code: string;
+}
+
 export default function Home() {
-  const [selectedSymbol, setSelectedSymbol] = React.useState(null);
+  const [selectedSymbol, setSelectedSymbol] = React.useState<MenuItem>({ name: '', code: '' });
 
   const symbols = holdingsData.map((item) => ({
     name: item.symbol,
