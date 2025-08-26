@@ -4,7 +4,10 @@ import React from 'react';
 import { Accordion, AccordionTab } from 'primereact/accordion';     
 import { Holding } from '../../interfaces/Holding';
 
-export default function SymbolSummary({ symbol }: { symbol: Holding }) {
+export default function SymbolSummary({ symbol }: { symbol: Holding | undefined}) {
+    if (!symbol) {
+        return <div data-testid="symbol-summary text-gray-900">No symbol data available.</div>;
+    }
     const date = new Date(symbol.lastUpdated);
 
     return (
@@ -37,4 +40,3 @@ export default function SymbolSummary({ symbol }: { symbol: Holding }) {
         </div>
     )
 }
-        
