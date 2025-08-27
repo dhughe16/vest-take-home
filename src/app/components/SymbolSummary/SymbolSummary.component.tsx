@@ -6,7 +6,7 @@ import { Holding } from '../../interfaces/Holding';
 
 export default function SymbolSummary({ symbol }: { symbol: Holding | undefined}) {
     if (!symbol) {
-        return <div data-testid="symbol-summary text-gray-900">No symbol data available.</div>;
+        return <div data-testid="symbol-summary text-gray-900">Please select a symbol from the dropdown above.</div>;
     }
     const date = new Date(symbol.lastUpdated);
 

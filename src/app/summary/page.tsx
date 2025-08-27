@@ -41,7 +41,7 @@ export default function Home() {
       >
         
       <Dropdown value={selectedSymbol} onChange={(e) => setSelectedSymbol(e.value)} options={symbols} optionLabel="name" 
-        placeholder="Select a symbol" className="w-full md:w-14rem" />
+        placeholder="Select a symbol" className="w-14rem" />
         {selectedSymbol && <SymbolSummary symbol={findSymbolData(selectedSymbol.name)} />}
       </div>
       <Link href="/" passHref>
