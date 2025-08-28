@@ -6,12 +6,12 @@ import { Holding } from '../../interfaces/Holding';
 
 export default function SymbolSummary({ symbol }: { symbol: Holding | undefined}) {
     if (!symbol) {
-        return <div data-testid="symbol-summary text-gray-900">Please select a symbol from the dropdown above.</div>;
+        return <div data-testid="symbol-summary" className="text-gray-900">Please select a symbol from the dropdown above.</div>;
     }
     const date = new Date(symbol.lastUpdated);
 
     return (
-        <div data-testid="symbol-summary text-gray-900">
+        <div data-testid="symbol-summary" className="text-gray-900">
             <h3 className="text-2xl font-bold">{symbol.name}</h3>
             <p className="text-sm text-gray-600 mb-2">Last Updated: {date.toLocaleTimeString()} {date.toLocaleDateString()}</p>
             <p>Sector: {symbol.sector}</p>
