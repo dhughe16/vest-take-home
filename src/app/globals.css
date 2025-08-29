@@ -31,6 +31,10 @@ body {
   color: white;
 }
 
+ .p-multiselect-panel .p-multiselect-items .p-multiselect-item.p-highlight {
+    color: white;
+  }
+
 header .p-button {
   background: transparent;
   border-color: transparent;

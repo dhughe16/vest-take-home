@@ -11,7 +11,7 @@ export default function SymbolSummary({ symbol }: { symbol: Holding | undefined}
     const date = new Date(symbol.lastUpdated);
 
     return (
-        <div data-testid="symbol-summary" className="text-gray-900">
+        <div data-testid="symbol-summary" className="text-gray-900 card bg-gray-200 p-4 m-2 rounded-2xl w-full max-w-md border-gray-700">
             <h3 className="text-2xl font-bold">{symbol.name}</h3>
             <p className="text-sm text-gray-600 mb-2">Last Updated: {date.toLocaleTimeString()} {date.toLocaleDateString()}</p>
             <p>Sector: {symbol.sector}</p>
