@@ -45,7 +45,9 @@ describe('MainChart', () => {
     render(<SymbolSummary symbol=""/>)
  
     const chart = screen.getByTestId('symbol-summary');
+    const text = screen.getByText('Please select a symbol from the dropdown above.');
  
+    expect(text).toBeInTheDocument();
     expect(chart).toBeInTheDocument();
   })
 })
