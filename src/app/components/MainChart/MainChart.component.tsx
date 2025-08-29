@@ -21,28 +21,32 @@ export default function MainChart() {
                     data: performanceData.map(item => item.portfolioValue),
                     fill: false,
                     borderColor: documentStyle.getPropertyValue('--blue-500'),
-                    tension: 0.4
+                    tension: 0.4,
+                    pointRadius: 6
                 },
                 {
                     label: 'SP500',
                     data: performanceData.map(item => item.benchmarkSP500),
                     fill: false,
-                    borderColor: documentStyle.getPropertyValue('--blue-500'),
-                    tension: 0.4
+                    borderColor: documentStyle.getPropertyValue('--red-500'),
+                    tension: 0.4,
+                    pointRadius: 6
                 },
                 {
                     label: 'Russell 2000',
                     data: performanceData.map(item => item.benchmarkRussell2000),
                     fill: false,
-                    borderColor: documentStyle.getPropertyValue('--blue-500'),
-                    tension: 0.4
+                    borderColor: documentStyle.getPropertyValue('--orange-500'),
+                    tension: 0.4,
+                    pointRadius: 6
                 },
                 {
                     label: 'MSCI World',
                     data: performanceData.map(item => item.benchmarkMSCIWorld),
                     fill: false,
-                    borderColor: documentStyle.getPropertyValue('--blue-500'),
-                    tension: 0.4
+                    borderColor: documentStyle.getPropertyValue('--green-500'),
+                    tension: 0.4,
+                    pointRadius: 6
                 },
             ]
         };

@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import 'primeicons/primeicons.css';
+@import "primereact/resources/themes/lara-light-teal/theme.css";
         
 :root {
   --background: #ffffff;
@@ -26,33 +27,12 @@ body {
   height: 100vh;
 }
 
-.p-dropdown-panel {
-  background: white;
+.p-dropdown-panel .p-dropdown-items .p-dropdown-item.p-highlight {
+  color: white;
 }
 
-header button {
+header .p-button {
+  background: transparent;
+  border-color: transparent;
   font-size: 1.5rem;
-  margin-inline: 1.5rem;
-}
-
-header button:hover {
-  color: #777;
-}
-
-.p-menu-overlay {
-  border: 1px solid #ccc;
-  border-radius: 24px;
-  padding: 1rem;
-}
-
-.p-menuitem:not(:last-child) {
-  margin-bottom: 0.5rem;
-}
-
-.p-menuitem:hover {
-  color: #444;
-}
-
-.p-menuitem-icon {
-  margin-inline-end: 0.5rem;
 }

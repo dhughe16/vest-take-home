@@ -8,7 +8,7 @@ import { Dropdown } from 'primereact/dropdown';
 import { Menu } from 'primereact/menu';
 import { Toast } from 'primereact/toast';
 import { Button } from 'primereact/button';
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 
 const findSymbolData = (symbol: string) => {
   return holdingsData.find((item) => item.symbol === symbol);
@@ -28,6 +28,10 @@ export default function Home() {
     name: item.symbol,
     code: item.symbol
   }));
+
+  useEffect(() => {
+    setSelectedSymbol(symbols[0]);
+  }, []);
 
   return (
     <div className="font-sans">
@@ -62,8 +66,9 @@ export default function Home() {
       <div
         className="card bg-white rounded-2xl p-3 w-[100%]"
       >
-      <Dropdown value={selectedSymbol} onChange={(e) => setSelectedSymbol(e.value)} options={symbols} optionLabel="name" 
-        placeholder="Select a symbol" className="w-14rem" />
+        <p>Choose a symbol to view using the dropdown below</p>
+        <Dropdown value={selectedSymbol} onChange={(e) => setSelectedSymbol(e.value)} options={symbols} optionLabel="name" 
+        placeholder="Select a symbol" className="border-gray-500 rounded-md" />
         {selectedSymbol && <SymbolSummary symbol={findSymbolData(selectedSymbol.name)} />}
       </div>
       </main>
