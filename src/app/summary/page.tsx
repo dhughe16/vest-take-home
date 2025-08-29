@@ -5,7 +5,10 @@ import SymbolSummary from "../components/SymbolSummary/SymbolSummary.component";
 import Link from "next/link";
 import holdingsData from "../../data/holdings.json";
 import { Dropdown } from 'primereact/dropdown';
-import React from "react";
+import { Menu } from 'primereact/menu';
+import { Toast } from 'primereact/toast';
+import { Button } from 'primereact/button';
+import React, { useRef } from "react";
 
 const findSymbolData = (symbol: string) => {
   return holdingsData.find((item) => item.symbol === symbol);
@@ -18,6 +21,8 @@ interface MenuItem {
 
 export default function Home() {
   const [selectedSymbol, setSelectedSymbol] = React.useState<MenuItem>({ name: '', code: '' });
+  const menu = useRef<Menu>(null);
+  const toast = useRef<Toast>(null);
 
   const symbols = holdingsData.map((item) => ({
     name: item.symbol,
@@ -26,7 +31,7 @@ export default function Home() {
 
   return (
     <div className="font-sans">
-      <header>
+      <header className="flex justify-between">
         <Image 
           className="p-2"
           src="/logo.svg"             
@@ -34,6 +39,22 @@ export default function Home() {
           width={100}
           height={32}>
         </Image>
+        <Toast ref={toast} />
+        <Menu model={[
+          { label: 'Performance', icon: 'pi pi-fw pi-chart-line', url: '/' },
+          { label: 'Symbols', icon: 'pi pi-fw pi-chart-pie', url: '/summary' },]} 
+          ref={menu}
+          id="popup_menu"
+          popup
+          className="bg-white m-2"
+          />
+        <Button 
+          icon="pi pi-bars" 
+          onClick={(e) => menu.current && menu.current.toggle(e)} 
+          aria-controls="popup_menu" 
+          aria-haspopup
+          className="m-2 text-white text-lg"
+          />
       </header>
       <main className="flex flex-col gap-[32px] row-start-2 items-center justify-items-center p-4">
       <div
