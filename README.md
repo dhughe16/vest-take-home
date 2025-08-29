@@ -26,7 +26,9 @@ This project uses [`next/font`](https://nextjs.org/docs/app/building-your-applic
 
 ## Testing
 
-In order to test, we will need to use Babel. Rename the file `.babel.config.js` to `babel.config.js`, removing the `.`. 
+In order to test, we will need to use Babel. This is due to a mistake I made when configuring the project where I used Turbopack instead of Babel. Until I fix the project to use Babel, you must rename the file to run tests, then change the name back to run in development mode.
+
+# Rename the file `.babel.config.js` to `babel.config.js`, removing the `.`. 
 
 Run `npm run test`.
 
@@ -43,6 +45,11 @@ I have not included testing beyond making sure data displays as I am not perform
 - Von Restorff Effect - unique items are more likely to be remembered
   - Call to Action buttons are the only orange items on the page
 - Chartjunk - don't overload charts with gradients, effects or irrelevant icons
+  - The chart does not use any gradients. The only effects are to hide and show the data points, which are hidden until mouseover for additional cleanliness.
+
+## Design Note
+
+This project was made within a limited amount of time. As such, it was styled mobile first and I did not have time to style for desktop.
 
 ## Next Steps
 
