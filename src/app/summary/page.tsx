@@ -32,13 +32,15 @@ export default function Home() {
   return (
     <div className="font-sans">
       <header className="flex justify-between">
-        <Image 
-          className="p-2"
-          src="/logo.svg"             
-          alt="Vest icon"
-          width={100}
-          height={32}>
-        </Image>
+        <Link href="/" passHref>
+          <Image 
+            className="p-2"
+            src="/logo.svg"             
+            alt="Vest icon"
+            width={100}
+            height={32}>
+          </Image>
+        </Link>
         <Toast ref={toast} />
         <Menu model={[
           { label: 'Performance', icon: 'pi pi-fw pi-chart-line', url: '/' },
@@ -58,16 +60,12 @@ export default function Home() {
       </header>
       <main className="flex flex-col gap-[32px] row-start-2 items-center justify-items-center p-4">
       <div
-        className="card bg-white rounded-md p-3 w-[100%]"
+        className="card bg-white rounded-2xl p-3 w-[100%]"
       >
-        
       <Dropdown value={selectedSymbol} onChange={(e) => setSelectedSymbol(e.value)} options={symbols} optionLabel="name" 
         placeholder="Select a symbol" className="w-14rem" />
         {selectedSymbol && <SymbolSummary symbol={findSymbolData(selectedSymbol.name)} />}
       </div>
-      <Link href="/" passHref>
-          <button className="primary bg-[#FF7619] rounded-sm p-3 font-bold text-lg text-white">View Performance</button>
-        </Link>
       </main>
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center m-3">
         <p className="text-xs text-[#7db2c8d6]">
