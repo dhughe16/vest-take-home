@@ -63,6 +63,12 @@ This project was made within a limited amount of time. As such, it was styled mo
 
 3. Test the connection and assumptions made around a dummy backend.
 
+## Recent Changes - 8-29-25
+
+- Move symbol summaries to porfolio performance (home) page.
+- Allow multiselect of symbols so they can be compared.
+- Separate legacy symbol summary page will remain for the moment in case it is needed for future reference.
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
